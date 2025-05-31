@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lamegel - Omegle Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="main-wrapper">
+    <header>
+      <h1>Lamegel</h1>
+      <p class="status-text" id="statusText">You're now chatting with a random stranger. Say hi!</p>
+    </header>
+
+    <section id="video-chat-section">
+      <div id="local-video-container" class="video-container">
+        <video id="localVideo" autoplay muted playsinline></video>
+        <div class="label">You</div>
+      </div>
+      <div id="remote-video-container" class="video-container">
+        <video id="remoteVideo" autoplay playsinline></video>
+        <div class="label">Stranger</div>
+      </div>
+    </section>
+
+    <section id="chat-section">
+      <div id="chat-messages"></div>
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Say something..."
+        autocomplete="off"
+      />
+    </section>
+
+    <div id="controls">
+      <button id="nextBtn">Next</button>
+      <button id="connectFriendBtn">Connect to Friend</button>
+      <input type="text" id="friendCodeInput" placeholder="Enter Friend Code" />
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
